@@ -1,0 +1,25 @@
+.dark {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(37, 37, 56);
+  height: 100vh;
+  width: 100%;
+  color: white;
+}
+
+.app-container {
+  display: flex;
+}
+
+.moviesContainer {
+  display: flex;
+}
+
+.movieCard {
+  /* display: flex; */
+  margin: 10px;
+  height: 200px;
+  width: 120px;
+  border: solid 1px lightgrey;
+  border-radius: 8px;
+}
