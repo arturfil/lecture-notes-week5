@@ -1,3 +1,8 @@
 body {
   height: 100%;
 }
+
+.link {
+  color: red;
+  margin-right: 10px;
+}
