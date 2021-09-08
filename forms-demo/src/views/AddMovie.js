@@ -8,10 +8,11 @@ const AddMovie = () => {
     title: "",
     director: "",
     IMDBRating: "",
-    hasOscars: "",
+    hasOscars: false,
   });
 
   const handleChange = (name) => (event) => {
+    
     setSingleMovie({
       ...singleMovie,
       [name]: event.target.value
@@ -38,7 +39,7 @@ const AddMovie = () => {
           <h3>{movie.title}</h3>
           <p>{movie.director}</p>
           <p>{movie.IMDBRating}</p>
-          <p>{movie.hasOscars}</p>
+          <p>{movie.hasOscars ? '✔️' : '❌'}</p>
         </div>
       ))}
 
@@ -70,13 +71,14 @@ const AddMovie = () => {
           type="number" 
           placeholder="IMDBRating" 
         />
+        <label>Has Oscars</label>
         <input
-          onChange={handleChange('hasOscars')}
-          value={singleMovie.hasOscars}
-          className="form-control" 
-          type="text" 
+          onChange={e => setSingleMovie({...singleMovie, hasOscars: e.target.checked})}
+          checked={singleMovie.hasOscars}
+          type="checkbox" 
           placeholder="hasOscars" 
         />
+        <br />
         <button onClick={handleSubmit} className="btn btn-outline-primary">Create</button>
       </form>
     </>
