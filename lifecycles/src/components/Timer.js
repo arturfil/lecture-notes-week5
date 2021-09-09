@@ -19,10 +19,10 @@ const Timer = () => {
   }, [count])
 
   return (
-    <>
+    <div style={{textAlign: 'center'}}>
       <h4>Timer Component</h4>
       <h3>{title}</h3>
-    </>
+    </div>
   )
 }
 
